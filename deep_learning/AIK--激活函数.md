@@ -16,9 +16,7 @@ AI知识点（AI Knowledge）系列第一篇文章--激活函数。
 
 激活函数是神经网络中非常重要的一个内容，神经网络是受到生物神经网络的启发，在生物神经网络中也存在着激活函数，而且激活函数决定了神经元之间是否要传递信号，而在人工的神经网络中，**激活函数的作用则主要是给网络添加非线性因素，使得网络可以逼近任意复杂的函数**，一个简单的神经元如下图所说，其中 `f` 表示的就是激活函数。
 
-
-
-![](/Users/luocai/Nutstore Files/Study_note_images/WechatPostsImages/激活函数/activation_function.jpg)
+![](https://github.com/ccc013/AI_Knowledge/raw/master/images/activation_functions/activation_function.jpg)
 
 如果是从数学上来定义的话，在ICML2016的一篇论文 [Noisy Activation Functions](https://arxiv.org/pdf/1603.00391v3.pdf)中，作者将激活函数定义为一个几乎处处可微的 h : R → R 。
 
@@ -73,7 +71,7 @@ $$
 $$
 f(x) = \frac{1}{1+e^{-x}}
 $$
-![](/Users/luocai/Nutstore Files/Study_note_images/WechatPostsImages/激活函数/sigmoid.jpg)
+![](https://github.com/ccc013/AI_Knowledge/raw/master/images/activation_functions/sigmoid.jpg)
 
 导数为：
 $$
@@ -102,7 +100,7 @@ f(x) = tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}
 $$
 其图像如下所示：
 
-![](/Users/luocai/Nutstore Files/Study_note_images/WechatPostsImages/激活函数/tanh.jpg)
+![](https://github.com/ccc013/AI_Knowledge/raw/master/images/activation_functions/tanh.jpg)
 
 导数为：
 $$
@@ -129,7 +127,7 @@ f(x) = max(0, x)
 $$
 其图像如下所示：
 
-![](/Users/luocai/Nutstore Files/Study_note_images/WechatPostsImages/激活函数/relu.jpg)
+![](https://github.com/ccc013/AI_Knowledge/raw/master/images/activation_functions/relu.jpg)
 
 导数是：
 $$
@@ -169,7 +167,7 @@ f(x) = max(ax, x), 0<a<1
 $$
 其图像如下所示，图中 `a=0.1` ，
 
-![](/Users/luocai/Nutstore Files/Study_note_images/WechatPostsImages/激活函数/leaky_relu.png)
+![](https://github.com/ccc013/AI_Knowledge/raw/master/images/activation_functions/leaky_relu.png)
 
 导数如下：
 $$
@@ -257,7 +255,7 @@ $$
 $$
 其图像如下所示：
 
-![](/Users/luocai/Nutstore Files/Study_note_images/WechatPostsImages/激活函数/swish.png)
+![](https://github.com/ccc013/AI_Knowledge/raw/master/images/activation_functions/swish.png)
 
 从图中可以看到，在 x<0 的部分和 ReLU 激活函数是不同的，会有一段 x 增大，但输出值下降的区域；
 
@@ -353,7 +351,7 @@ $$
 
 在介绍 `Sigmoid` 的缺点的时候说到它不是以 0 为中心，这个特点主要是影响收敛速度，因为它的输出值是恒为正的，那么在梯度下降，进行参数更新的时候，所有参数每次更新的方向都是同个方向，要不都是正方向，或者要不都是负方向，其更新就是一个 `z` 字形，如下图所示：
 
-![图片来自文章https://liam.page/2018/04/17/zero-centered-active-function/](/Users/luocai/Nutstore Files/Study_note_images/WechatPostsImages/激活函数/zig-zag-gradient.png)
+![图片来自文章https://liam.page/2018/04/17/zero-centered-active-function/](https://github.com/ccc013/AI_Knowledge/raw/master/images/activation_functions/zig-zag-gradient.png)
 
 借用文章 [cs231n_激活函数](https://blog.csdn.net/weixin_38646522/article/details/79534677) 的例子：
 
